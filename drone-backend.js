@@ -43,7 +43,7 @@ function fly(robot) {
                             bot.drone.front(0);
                             after(1*1000, function() {
                                 bot.drone.left(0.1);
-                                after(2*1000, function() {
+                                after(3*1000, function() {
                                     bot.drone.left(0);
                                     after(2*1000, function() {
                                         bot.drone.back(0.1);

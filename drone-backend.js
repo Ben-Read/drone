@@ -29,7 +29,7 @@ function fly(robot) {
     });
     bot.drone.ftrim();
     bot.drone.takeoff();
-    after(10*1000, function() {
+    after(7*1000, function() {
         bot.drone.front(0.1);
         after(1.5*1000, function() {
             bot.drone.front(0);
@@ -89,6 +89,7 @@ function fly(robot) {
  });
  var websocket = new WebSocket(url);
  }*/
+
 
 
 

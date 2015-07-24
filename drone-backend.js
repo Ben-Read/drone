@@ -30,21 +30,21 @@ function fly(robot) {
     bot.drone.ftrim();
     bot.drone.takeoff();
     after(10*1000, function() {
-        bot.drone.front(0.25);
+        bot.drone.front(0.1);
         after(2*1000, function() {
             bot.drone.front(0);
             after(1*1000, function(){
-                bot.drone.left(0.25);
+                bot.drone.right(0.1);
                 after(2*1000, function() {
-                    bot.drone.left(0);
+                    bot.drone.right(0);
                     after(1*1000, function() {
-                        bot.drone.back(0.25);
+                        bot.drone.front(0.1);
                         after(2*1000, function() {
-                            bot.drone.back(0);
+                            bot.drone.front(0);
                             after(1*1000, function() {
-                                bot.drone.right(0.25);
+                                bot.drone.left(0.1);
                                 after(2*1000, function() {
-                                    bot.drone.right(0);
+                                    bot.drone.left(0);
                                 })
                             })
                         })
@@ -61,6 +61,22 @@ function fly(robot) {
         bot.drone.stop();
     });
 }
+
+/*var server = ws
+    .createServer(receiveConnection)
+    .listen(8001);
+
+function receiveConnection(connection) {
+    console.log("New connection");
+    connection.on("close", function(message) {
+        console.log("Connection closed", message);
+    });
+    connection.on("error", function(error) {
+        console.log("Connection error", error);
+    });
+}*/
+
+
 
 
 Cylon.start();

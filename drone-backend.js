@@ -17,7 +17,7 @@ Cylon.robot()
         connection: "ardrone"
     })
     .on("ready", fly);
-    
+
 // Fly the bot
 
 function fly(robot) {
@@ -76,18 +76,19 @@ function fly(robot) {
 }
 
 /*var server = ws
-    .createServer(receiveConnection)
-    .listen(8001);
+ .createServer(receiveConnection)
+ .listen(8001);
 
-function receiveConnection(connection) {
-    console.log("New connection");
-    connection.on("close", function(message) {
-        console.log("Connection closed", message);
-    });
-    connection.on("error", function(error) {
-        console.log("Connection error", error);
-    });
-}*/
+ function receiveConnection(connection) {
+ console.log("New connection");
+ connection.on("close", function(message) {
+ console.log("Connection closed", message);
+ });
+ connection.on("error", function(error) {
+ console.log("Connection error", error);
+ });
+ var websocket = new WebSocket(url);
+ }*/
 
 
 

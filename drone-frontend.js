@@ -1,11 +1,24 @@
-
-
-
+/*var droneAddress = "ws://127.0.0.1:8001/";
+ var websocket;*/
 
 function init() {
+    //droneWebSocket(droneAddress);
     var tracker = initTracker("#example");
     tracking.track("#example .drone", tracker);
 }
+
+/*function droneWebSocket(url) {
+ websocket = new WebSocket(url);
+ websocket.onopen = onOpen;          1
+ }
+
+ function onOpen() {
+ console.log("Connection open!");    2
+ }
+
+ function onMessage(message) {
+ console.log(message);
+ }*/
 
 function initTracker(element) {
     console.log("starting tracking");

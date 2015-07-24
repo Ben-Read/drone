@@ -31,7 +31,7 @@ function fly(robot) {
     bot.drone.takeoff();
     after(10*1000, function() {
         bot.drone.front(0.1);
-        after(2*1000, function() {
+        after(1.5*1000, function() {
             bot.drone.front(0);
             after(1*1000, function(){
                 bot.drone.right(0.1);
@@ -45,6 +45,19 @@ function fly(robot) {
                                 bot.drone.left(0.1);
                                 after(2*1000, function() {
                                     bot.drone.left(0);
+                                    after(2*1000, function() {
+                                        bot.drone.back(0.1);
+                                        after(2*1000, function() {
+                                            bot.drone.back(0);
+                                            after(1*1000, function() {
+                                                bot.drone.right(0.1);
+                                                after(1*1000, function(){
+                                                    bot.drone.right(0);
+                                                })
+
+                                            })
+                                        })
+                                    })
                                 })
                             })
                         })
@@ -54,10 +67,10 @@ function fly(robot) {
         })
 
     });
-    after(25*1000, function() {
+    after(30*1000, function() {
         bot.drone.land();
     });
-    after(30*1000, function() {
+    after(35*1000, function() {
         bot.drone.stop();
     });
 }
